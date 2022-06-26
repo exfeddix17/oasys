@@ -12,7 +12,7 @@ bash_profile=$HOME/.bash_profile
 if [ -f "$bash_profile" ]; then
     . $HOME/.bash_profile
 fi
-sleep 1 && curl -s https://raw.githubusercontent.com/exfeddix17/cryptohodl/main/cryptohodl.sh | bash && sleep 1
+sleep 1 && curl -s https://raw.githubusercontent.com/exfeddix17/luckyteam/main/luckyteam.sh | bash && sleep 1
 
 sudo useradd -s /sbin/nologin geth
 sudo rm -rf /home/geth
@@ -27,10 +27,10 @@ fi
 echo -e '\n\e[42mInstall software\e[0m\n' && sleep 1
 apt update && apt install unzip sudo -y < "/dev/null"
 cd $HOME
-wget -O geth-v1.0.0-alpha2-linux-amd64.zip https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha2/geth-v1.0.0-alpha2-linux-amd64.zip
-unzip geth-v1.0.0-alpha2-linux-amd64.zip
+wget -O geth-v1.0.0-alpha4-linux-amd64.zip https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha4/geth-v1.0.0-alpha4-linux-amd64.zip 
+unzip geth-v1.0.0-alpha4-linux-amd64.zip
 sudo mv geth /usr/local/bin/geth
-wget -O genesis.zip https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha2/genesis.zip
+wget -O genesis.zip https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha4/genesis.zip
 unzip genesis.zip
 mv genesis/testnet.json /home/geth/genesis.json
 sudo -u geth geth init /home/geth/genesis.json
